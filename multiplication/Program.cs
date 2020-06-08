@@ -31,7 +31,8 @@ public class Program
                             webClient.QueryString.Add("x", y.ToString());
                             webClient.QueryString.Add("y", y.ToString());
 
-                            var apiUri = new Uri("http://addition/");
+                            var additionUrl = Environment.GetEnvironmentVariable("ADDITION_URL");
+                            var apiUri = new Uri(additionUrl);
                             var result = await webClient.DownloadStringTaskAsync(apiUri);
 
                             int.TryParse(result, out int multiply);
