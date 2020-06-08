@@ -1,0 +1,60 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Start Add",
+            "presentation": {
+                "hidden": true
+            },
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/addition/bin/Debug/netcoreapp3.1/api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/addition",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:8081"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": "Start Multi",
+            "presentation": {
+                "hidden": true
+            },
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/multiplication/bin/Debug/netcoreapp3.1/api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/multiplication",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "uriFormat": "%s/?x=1&y=1",
+                "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:8082",
+                "ADDITION_URL": "http://localhost:8081"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        }
+    ],
+    "compounds": [
+        {
+          "name": "Start Both",
+          "configurations": ["Start Add", "Start Multi"],
+        }
+      ]
+}
