@@ -1,9 +1,18 @@
 version: "3.3"
 services:
-  sum_rest:
-    container_name: SumRest
+  addition:
+    container_name: addition
     build:
-      context: .
+      context: ./addition/
       dockerfile: Dockerfile
     ports:
       - "8081:80"
+  multiplication:
+    container_name: multiplication
+    build:
+      context: ./multiplication/
+      dockerfile: Dockerfile
+    links:
+      - addition
+    ports:
+      - "8082:80"
