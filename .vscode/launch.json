@@ -12,7 +12,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/addition/bin/Debug/netcoreapp3.1/api.dll",
+            "program": "${workspaceFolder}/addition/bin/Debug/netcoreapp3.1/addition.dll",
             "args": [],
             "cwd": "${workspaceFolder}/addition",
             "stopAtEntry": false,
@@ -32,7 +32,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/multiplication/bin/Debug/netcoreapp3.1/api.dll",
+            "program": "${workspaceFolder}/multiplication/bin/Debug/netcoreapp3.1/multiplication.dll",
             "args": [],
             "cwd": "${workspaceFolder}/multiplication",
             "stopAtEntry": false,
@@ -53,8 +53,11 @@
     ],
     "compounds": [
         {
-          "name": "Start Both",
-          "configurations": ["Start Add", "Start Multi"],
+            "name": "Start Both",
+            "configurations": [
+                "Start Add",
+                "Start Multi"
+            ],
         }
-      ]
+    ]
 }

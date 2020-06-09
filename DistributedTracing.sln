@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "addition", "addition\api.csproj", "{DE0B74A4-14E1-48B1-88A2-02DF685DBC98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "addition", "addition\addition.csproj", "{DE0B74A4-14E1-48B1-88A2-02DF685DBC98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multiplication", "multiplication\api.csproj", "{389FC32D-C427-4199-B5CB-4C18619B00A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multiplication", "multiplication\multiplication.csproj", "{389FC32D-C427-4199-B5CB-4C18619B00A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
